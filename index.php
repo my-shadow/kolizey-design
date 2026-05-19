@@ -169,8 +169,67 @@ tailwind.config = {
 </nav>
 
 <!-- HERO -->
-<section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-violet-50 via-white to-purple-50">
-  <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
+<section class="relative pt-16 min-h-screen flex items-center bg-gradient-to-br from-violet-50 via-white to-purple-50 overflow-hidden">
+
+  <!-- Dot grid -->
+  <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle,rgba(47,5,120,.055) 1px,transparent 1px);background-size:28px 28px;"></div>
+
+  <!-- Radial glow blobs -->
+  <div class="absolute -top-48 -left-48 w-[640px] h-[640px] pointer-events-none" style="background:radial-gradient(circle,rgba(47,5,120,.09) 0%,transparent 65%);"></div>
+  <div class="absolute -bottom-32 right-0 w-[420px] h-[420px] pointer-events-none" style="background:radial-gradient(circle,rgba(47,5,120,.06) 0%,transparent 65%);"></div>
+
+  <!-- Floating rings -->
+  <div class="absolute top-1/3 left-[15%] w-52 h-52 rounded-full pointer-events-none hidden md:block" style="border:1px solid rgba(47,5,120,.07);"></div>
+  <div class="absolute top-1/4 left-[8%]  w-80 h-80 rounded-full pointer-events-none hidden md:block" style="border:1px solid rgba(47,5,120,.04);"></div>
+
+  <!-- Bezier curve (vector tool reference) -->
+  <svg class="absolute bottom-12 left-0 w-80 h-52 pointer-events-none hidden md:block" viewBox="0 0 320 210" fill="none" style="opacity:.07;">
+    <path d="M20,180 C80,60 200,200 300,30" stroke="#2f0578" stroke-width="1.5" fill="none"/>
+    <line x1="20" y1="180" x2="80" y2="60"   stroke="#2f0578" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="300" y1="30" x2="200" y2="200"  stroke="#2f0578" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="20"  cy="180" r="4" fill="#2f0578"/>
+    <circle cx="300" cy="30"  r="4" fill="#2f0578"/>
+    <circle cx="80"  cy="60"  r="3" fill="none" stroke="#2f0578" stroke-width="1.5"/>
+    <circle cx="200" cy="200" r="3" fill="none" stroke="#2f0578" stroke-width="1.5"/>
+  </svg>
+
+  <!-- Pantone-style color swatches -->
+  <div class="absolute bottom-24 left-10 flex flex-col gap-1 rotate-6 pointer-events-none hidden lg:flex" style="opacity:.18;">
+    <div class="w-9 h-6 rounded-sm" style="background:#2f0578;"></div>
+    <div class="w-9 h-6 rounded-sm" style="background:#6d28d9;"></div>
+    <div class="w-9 h-6 rounded-sm" style="background:#2AABEE;"></div>
+    <div class="w-9 h-6 rounded-sm" style="background:#25D366;"></div>
+    <div class="w-9 h-6 rounded-sm" style="background:#f59e0b;"></div>
+    <div class="w-9 h-6 rounded-sm" style="background:#f43f5e;"></div>
+    <div class="w-9 h-10 rounded-sm bg-white flex items-end justify-center pb-1" style="border:1px solid rgba(47,5,120,.2);">
+      <span style="font-size:5px;font-family:monospace;color:rgba(47,5,120,.5);letter-spacing:.05em;">PANTONE</span>
+    </div>
+  </div>
+
+  <!-- Crop marks (print design reference) -->
+  <svg class="absolute top-20 left-6 w-8 h-8 pointer-events-none hidden md:block" viewBox="0 0 32 32" fill="none" style="opacity:.15;">
+    <line x1="8" y1="16" x2="14" y2="16" stroke="#2f0578" stroke-width="1"/>
+    <line x1="16" y1="8" x2="16" y2="14" stroke="#2f0578" stroke-width="1"/>
+  </svg>
+  <svg class="absolute top-20 right-6 w-8 h-8 pointer-events-none hidden md:block" viewBox="0 0 32 32" fill="none" style="opacity:.15;">
+    <line x1="24" y1="16" x2="18" y2="16" stroke="#2f0578" stroke-width="1"/>
+    <line x1="16" y1="8" x2="16" y2="14" stroke="#2f0578" stroke-width="1"/>
+  </svg>
+  <svg class="absolute bottom-8 left-6 w-8 h-8 pointer-events-none hidden md:block" viewBox="0 0 32 32" fill="none" style="opacity:.15;">
+    <line x1="8" y1="16" x2="14" y2="16" stroke="#2f0578" stroke-width="1"/>
+    <line x1="16" y1="24" x2="16" y2="18" stroke="#2f0578" stroke-width="1"/>
+  </svg>
+  <svg class="absolute bottom-8 right-6 w-8 h-8 pointer-events-none hidden md:block" viewBox="0 0 32 32" fill="none" style="opacity:.15;">
+    <line x1="24" y1="16" x2="18" y2="16" stroke="#2f0578" stroke-width="1"/>
+    <line x1="16" y1="24" x2="16" y2="18" stroke="#2f0578" stroke-width="1"/>
+  </svg>
+
+  <!-- Small geometric accents -->
+  <div class="absolute top-36 left-[22%] w-4 h-4 rotate-45 pointer-events-none hidden md:block" style="border:1.5px solid rgba(47,5,120,.12);"></div>
+  <div class="absolute top-48 left-[18%] w-2.5 h-2.5 rounded-full pointer-events-none hidden md:block" style="background:rgba(47,5,120,.1);"></div>
+  <div class="absolute bottom-36 right-[8%] w-5 h-5 rotate-12 pointer-events-none hidden md:block" style="border:1.5px solid rgba(47,5,120,.1);"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
     <div>
       <div class="anim anim-up inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
         <i class="fa-solid fa-location-dot text-xs"></i>
