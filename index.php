@@ -143,7 +143,7 @@ tailwind.config = {
 
   /* Service card hover */
   .service-card { transition: transform .25s ease, box-shadow .25s ease; }
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(124,58,237,.15); }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(47,5,120,.2); }
 </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -286,139 +286,139 @@ tailwind.config = {
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services" class="py-20 bg-white">
+<!-- SERVICES (dark) -->
+<section id="services" class="py-20 bg-[#0e0025]">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-14">
-      <h2 class="anim anim-up text-3xl md:text-4xl font-black text-gray-900 mb-3">Наші послуги</h2>
-      <p class="anim anim-up d1 text-gray-500 text-lg">Усе для друку та персоналізації — в одному місці</p>
+      <h2 class="anim anim-up text-3xl md:text-4xl font-black text-white mb-3">Наші послуги</h2>
+      <p class="anim anim-up d1 text-purple-300/70 text-lg">Усе для друку та персоналізації — в одному місці</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
       <!-- Ксерокопія -->
-      <div class="anim anim-up d1 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-copy text-xl text-violet-600"></i>
+      <div class="anim anim-up d1 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-copy text-xl text-violet-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Ксерокопія</h3>
-        <div class="space-y-1 text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Ксерокопія</h3>
+        <div class="space-y-1 text-sm text-gray-400">
           <div class="flex justify-between">
             <span>Чорно-біла</span>
-            <span class="font-semibold text-gray-800"><?= e($p['copy_bw']) ?> грн/лист</span>
+            <span class="font-semibold text-white"><?= e($p['copy_bw']) ?> грн/лист</span>
           </div>
           <div class="flex justify-between">
             <span>Кольорова</span>
-            <span class="font-semibold text-gray-800"><?= e($p['copy_color']) ?> грн/лист</span>
+            <span class="font-semibold text-white"><?= e($p['copy_color']) ?> грн/лист</span>
           </div>
         </div>
       </div>
 
       <!-- Ламінування -->
-      <div class="anim anim-up d2 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-fuchsia-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-layer-group text-xl text-fuchsia-600"></i>
+      <div class="anim anim-up d2 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-fuchsia-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-layer-group text-xl text-fuchsia-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Ламінування</h3>
-        <div class="space-y-1 text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Ламінування</h3>
+        <div class="space-y-1 text-sm text-gray-400">
           <div class="flex justify-between">
             <span>Формат А4</span>
-            <span class="font-semibold text-gray-800"><?= e($p['lam_a4']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['lam_a4']) ?> грн</span>
           </div>
           <div class="flex justify-between">
             <span>Формат А3</span>
-            <span class="font-semibold text-gray-800"><?= e($p['lam_a3']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['lam_a3']) ?> грн</span>
           </div>
         </div>
       </div>
 
       <!-- Сканування -->
-      <div class="anim anim-up d3 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-file-import text-xl text-sky-600"></i>
+      <div class="anim anim-up d3 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-file-import text-xl text-sky-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Сканування</h3>
-        <div class="text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Сканування</h3>
+        <div class="text-sm text-gray-400">
           <div class="flex justify-between">
             <span>За аркуш</span>
-            <span class="font-semibold text-gray-800"><?= e($p['scan']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['scan']) ?> грн</span>
           </div>
         </div>
       </div>
 
       <!-- Фото на документи -->
-      <div class="anim anim-up d4 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-id-card text-xl text-amber-600"></i>
+      <div class="anim anim-up d4 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-id-card text-xl text-amber-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Фото на документи</h3>
-        <div class="text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Фото на документи</h3>
+        <div class="text-sm text-gray-400">
           <div class="flex justify-between">
             <span>6 фото · 5 хвилин</span>
-            <span class="font-semibold text-gray-800"><?= e($p['id_photo']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['id_photo']) ?> грн</span>
           </div>
         </div>
       </div>
 
       <!-- Друк фото -->
-      <div class="anim anim-up d1 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-image text-xl text-emerald-600"></i>
+      <div class="anim anim-up d1 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-image text-xl text-emerald-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Друк фото</h3>
-        <div class="space-y-1 text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Друк фото</h3>
+        <div class="space-y-1 text-sm text-gray-400">
           <div class="flex justify-between">
             <span>Формат А6 (10×15)</span>
-            <span class="font-semibold text-gray-800"><?= e($p['photo_a6']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['photo_a6']) ?> грн</span>
           </div>
           <div class="flex justify-between">
             <span>Формат А4</span>
-            <span class="font-semibold text-gray-800"><?= e($p['photo_a4']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['photo_a4']) ?> грн</span>
           </div>
           <div class="flex justify-between">
             <span>Формат А3</span>
-            <span class="font-semibold text-gray-800"><?= e($p['photo_a3']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['photo_a3']) ?> грн</span>
           </div>
         </div>
       </div>
 
       <!-- Друк на чашках -->
-      <div class="anim anim-up d2 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-mug-hot text-xl text-orange-600"></i>
+      <div class="anim anim-up d2 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-mug-hot text-xl text-orange-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Друк на чашках</h3>
-        <div class="text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Друк на чашках</h3>
+        <div class="text-sm text-gray-400">
           <div class="flex justify-between">
             <span>Ваш дизайн або фото</span>
-            <span class="font-semibold text-gray-800"><?= e($p['mug']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['mug']) ?> грн</span>
           </div>
         </div>
       </div>
 
       <!-- Друк на футболках -->
-      <div class="anim anim-up d3 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-solid fa-shirt text-xl text-rose-600"></i>
+      <div class="anim anim-up d3 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-rose-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-shirt text-xl text-rose-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Друк на футболках</h3>
-        <div class="text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Друк на футболках</h3>
+        <div class="text-sm text-gray-400">
           <div class="flex justify-between">
             <span>Ваш дизайн або фото</span>
-            <span class="font-semibold text-gray-800"><?= e($p['tshirt']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['tshirt']) ?> грн</span>
           </div>
         </div>
       </div>
 
       <!-- Фото в рамці -->
-      <div class="anim anim-up d4 service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
-          <i class="fa-regular fa-image text-xl text-teal-600"></i>
+      <div class="anim anim-up d4 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-regular fa-image text-xl text-teal-400"></i>
         </div>
-        <h3 class="font-bold text-gray-900 mb-3">Фото в рамці</h3>
-        <div class="text-sm text-gray-500">
+        <h3 class="font-bold text-white mb-3">Фото в рамці</h3>
+        <div class="text-sm text-gray-400">
           <div class="flex justify-between">
             <span>Різні розміри рамок</span>
-            <span class="font-semibold text-gray-800"><?= e($p['frame']) ?> грн</span>
+            <span class="font-semibold text-white"><?= e($p['frame']) ?> грн</span>
           </div>
         </div>
       </div>
@@ -427,7 +427,7 @@ tailwind.config = {
 
     <!-- CTA under services -->
     <div class="anim anim-up mt-12 text-center">
-      <p class="text-gray-500 mb-4">Маєте запитання щодо послуг або хочете замовити?</p>
+      <p class="text-gray-400 mb-4">Маєте запитання щодо послуг або хочете замовити?</p>
       <div class="flex flex-wrap justify-center gap-3">
         <a href="<?= e($tg_link) ?>" target="_blank"
            class="inline-flex items-center gap-2 bg-[#2AABEE] text-white font-semibold px-5 py-2.5 rounded-xl hover:opacity-90 transition-opacity text-sm">
@@ -442,7 +442,7 @@ tailwind.config = {
           <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
         <a href="<?= e($tel_link) ?>"
-           class="inline-flex items-center gap-2 bg-gray-900 text-white font-semibold px-5 py-2.5 rounded-xl hover:opacity-90 transition-opacity text-sm">
+           class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-white/20 transition-colors text-sm">
           <i class="fa-solid fa-phone text-xs"></i> <?= e($phone) ?>
         </a>
       </div>
