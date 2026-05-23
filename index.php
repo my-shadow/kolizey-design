@@ -48,6 +48,8 @@ $phone_int = '+38' . preg_replace('/\D/', '', $phone);
 $mgr_int   = '+38' . preg_replace('/\D/', '', $phone_mgr);
 $wa_num    = ltrim($mgr_int, '+');
 
+$site_url = 'https://' . $_SERVER['HTTP_HOST'];
+
 $tg_link  = 'https://t.me/' . $mgr_int;
 $vb_link  = 'viber://chat?number=' . urlencode($mgr_int);
 $wa_link  = 'https://wa.me/' . $wa_num;
@@ -60,15 +62,32 @@ $tel_link = 'tel:' . $phone_int;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= sv('meta_title') ?: e($business) ?></title>
 <meta name="description" content="<?= sv('meta_desc') ?>">
+<link rel="canonical" href="<?= e($site_url) ?>/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="uk_UA">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<?= e($site_url) ?>/">
+<meta property="og:site_name" content="<?= e($business) ?>">
 <meta property="og:title" content="<?= sv('meta_title') ?: e($business) ?>">
 <meta property="og:description" content="<?= sv('meta_desc') ?>">
-<meta property="og:type" content="website">
 <?php if (!empty($s['og_image'])): ?>
 <meta property="og:image" content="<?= sv('og_image') ?>">
+<meta property="og:image:secure_url" content="<?= sv('og_image') ?>">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<?= e($business) ?>">
+<meta property="og:image:type" content="image/jpeg">
 <?php endif; ?>
-<meta property="og:locale" content="uk_UA">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= sv('meta_title') ?: e($business) ?>">
+<meta name="twitter:description" content="<?= sv('meta_desc') ?>">
+<?php if (!empty($s['og_image'])): ?>
+<meta name="twitter:image" content="<?= sv('og_image') ?>">
+<?php endif; ?>
+
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <?php if ($analytics_id): ?>
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= e($analytics_id) ?>"></script>
