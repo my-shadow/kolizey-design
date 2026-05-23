@@ -31,6 +31,7 @@ $p = [
     'mug'        => $s['price_mug']        ?? '400',
     'tshirt'     => $s['price_tshirt']     ?? '500',
     'frame'      => $s['price_frame']      ?? '150',
+    'binding'    => $s['price_binding']    ?? '100',
     'internet'   => $s['price_internet_hour'] ?? '',
 ];
 
@@ -423,6 +424,20 @@ tailwind.config = {
         </div>
       </div>
 
+      <!-- Зшивання на пружині -->
+      <div class="anim anim-up d1 service-card bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:rgba(243,79,118,.2)">
+          <i class="fa-solid fa-book-open text-xl" style="color:rgb(243,79,118)"></i>
+        </div>
+        <h3 class="font-bold text-white mb-3">Зшивання на пружині</h3>
+        <div class="text-sm text-gray-400">
+          <div class="flex justify-between">
+            <span>Зшивання документів</span>
+            <span class="font-semibold text-white"><?= e($p['binding']) ?> грн</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- CTA under services -->
@@ -523,6 +538,38 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- BINDING SERVICE -->
+<section id="binding" class="py-20 bg-gradient-to-b from-violet-50 to-white">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="anim anim-up inline-flex items-center gap-2 text-sm font-semibold px-4 py-1.5 rounded-full mb-5" style="background:rgba(243,79,118,.12);color:rgb(243,79,118)">
+        <i class="fa-solid fa-book-open text-xs"></i>
+        <span>Зшивання документів</span>
+      </div>
+      <h2 class="anim anim-up d1 text-3xl md:text-4xl font-black text-gray-900 mb-4">Зшивання на пружині</h2>
+      <p class="anim anim-up d2 text-gray-500 text-lg leading-relaxed mb-6">Акуратне зшивання документів, дипломних робіт, звітів та будь-яких матеріалів на металеву або пластикову пружину. Швидко та охайно.</p>
+      <div class="anim anim-up d3 inline-flex items-center gap-3 rounded-xl px-5 py-3 mb-6" style="background:rgba(243,79,118,.08)">
+        <i class="fa-solid fa-tag" style="color:rgb(243,79,118)"></i>
+        <span class="text-gray-700">Вартість: <strong class="text-gray-900"><?= e($p['binding']) ?> грн</strong></span>
+      </div>
+      <div class="anim anim-up d4 flex flex-wrap gap-3">
+        <a href="<?= e($tg_link) ?>" target="_blank"
+           class="inline-flex items-center gap-2 bg-[#2AABEE] text-white font-semibold px-5 py-2.5 rounded-xl hover:opacity-90 transition-opacity text-sm">
+          <i class="fa-brands fa-telegram"></i> Telegram
+        </a>
+        <a href="<?= e($tel_link) ?>"
+           class="inline-flex items-center gap-2 bg-gray-900 text-white font-semibold px-5 py-2.5 rounded-xl hover:opacity-90 transition-opacity text-sm">
+          <i class="fa-solid fa-phone text-xs"></i> Зателефонувати
+        </a>
+      </div>
+    </div>
+    <div class="anim anim-right d2 flex justify-center">
+      <img src="photos/binding.jpg" alt="Зшивання документів на пружині"
+           class="w-full h-80 object-cover rounded-3xl shadow-xl">
+    </div>
+  </div>
+</section>
+
 <!-- CONTACTS -->
 <section id="contacts" class="py-20 bg-gradient-to-b from-violet-50 to-white">
   <div class="max-w-6xl mx-auto px-4">
@@ -601,16 +648,17 @@ tailwind.config = {
 <footer class="bg-gray-900 text-gray-400 py-8">
   <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-2 text-white font-bold">
-      <i class="fa-solid fa-print text-brand"></i>
+      <i class="fa-solid fa-print text-white"></i>
       <span><?= e($business) ?></span>
     </div>
     <nav class="flex flex-wrap justify-center gap-6 text-sm">
       <a href="#services"  class="hover:text-white transition-colors">Послуги</a>
       <a href="#gallery"   class="hover:text-white transition-colors">Галерея</a>
       <a href="#internet"  class="hover:text-white transition-colors">Інтернет</a>
+      <a href="#binding"   class="hover:text-white transition-colors">Зшивання</a>
       <a href="#contacts"  class="hover:text-white transition-colors">Контакти</a>
     </nav>
-    <p class="text-sm"><?= e($footer_text) ?></p>
+    <p class="text-sm">© <?= date('Y') ?> <?= e($business) ?>. Усі права захищені.</p>
   </div>
 </footer>
 

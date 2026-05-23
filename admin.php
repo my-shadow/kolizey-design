@@ -36,8 +36,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'save_content' && isset($_SE
         'price_lam_a4','price_lam_a3',
         'price_scan','price_id_photo',
         'price_photo_a6','price_photo_a4','price_photo_a3',
-        'price_mug','price_tshirt','price_frame',
-        'footer_text',
+        'price_mug','price_tshirt','price_frame','price_binding',
     ];
     foreach ($fields as $f) {
         $s[$f] = trim($_POST[$f] ?? '');
@@ -355,6 +354,16 @@ $saved      = isset($_GET['saved']);
                 <span class="text-sm text-gray-400 shrink-0">грн</span>
               </div>
             </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-xs" style="color:rgb(243,79,118)"></i> Зшивання на пружині
+              </p>
+              <div class="flex items-center gap-1.5">
+                <input type="number" name="price_binding" value="<?= sv('price_binding') ?>" min="0"
+                       class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand">
+                <span class="text-sm text-gray-400 shrink-0">грн</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -385,18 +394,6 @@ $saved      = isset($_GET['saved']);
               <span class="text-sm text-gray-400 shrink-0">грн/год</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-        <h2 class="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-shoe-prints fa-rotate-270 text-brand text-sm"></i> Футер
-        </h2>
-        <div>
-          <label class="field-label">Текст футера</label>
-          <input type="text" name="footer_text" value="<?= sv('footer_text') ?>"
-                 class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand">
         </div>
       </div>
 
