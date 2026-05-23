@@ -69,7 +69,7 @@ $tel_link = 'tel:' . $phone_int;
 <meta property="og:image:height" content="630">
 <?php endif; ?>
 <meta property="og:locale" content="uk_UA">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <?php if ($analytics_id): ?>
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= e($analytics_id) ?>"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<?= e($analytics_id) ?>');</script>
