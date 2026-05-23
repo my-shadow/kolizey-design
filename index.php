@@ -171,10 +171,10 @@ tailwind.config = {
 <!-- NAVBAR -->
 <nav id="navbar" class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
   <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2 font-black text-xl text-brand select-none">
+    <p class="flex items-center gap-2 font-black text-xl text-brand select-none">
       <i class="fa-solid fa-print text-brand"></i>
       <span>Колізей</span>
-    </a>
+    </p>
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
       <a href="#services" class="hover:text-brand transition-colors">Послуги</a>
       <a href="#gallery"  class="hover:text-brand transition-colors">Галерея</a>
@@ -221,9 +221,7 @@ tailwind.config = {
     <div class="w-9 h-6 rounded-sm" style="background:#25D366;"></div>
     <div class="w-9 h-6 rounded-sm" style="background:#f59e0b;"></div>
     <div class="w-9 h-6 rounded-sm" style="background:#f43f5e;"></div>
-    <div class="w-9 h-10 rounded-sm bg-white flex items-end justify-center pb-1" style="border:1px solid rgba(47,5,120,.2);">
-      <span style="font-size:5px;font-family:monospace;color:rgba(47,5,120,.5);letter-spacing:.05em;">PANTONE</span>
-    </div>
+    <div class="w-9 h-10 rounded-sm bg-white flex items-end justify-center pb-1" style="border:1px solid rgba(47,5,120,.2);"></div>
   </div>
 
   <!-- Crop marks (print design reference) -->
